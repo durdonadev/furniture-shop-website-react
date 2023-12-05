@@ -1,5 +1,6 @@
 import "./Footer.css";
 import logo from "../../../../assets/logo.svg";
+import { contactLinks, productLinks, aboutUsLinks } from "./data.js";
 
 export const Footer = () => {
     return (
@@ -20,45 +21,51 @@ export const Footer = () => {
                             CONTACT
                         </h4>
                         <p className="text-lg">62 Orp St, Seattle, USA</p>
-                        <a
-                            href="mailto: sales@furnatur.com"
-                            className="text-lg"
-                        >
-                            sales@furnatur.com
-                        </a>
-                        <a href="+1 800 726 915273" className="text-lg">
-                            +1 800 726 915273
-                        </a>
+                        {contactLinks.map((link, idx) => {
+                            return (
+                                <a
+                                    href={link.link}
+                                    className="text-lg"
+                                    key={idx}
+                                >
+                                    {link.text}
+                                </a>
+                            );
+                        })}
                     </div>
 
                     <div className="footer__product">
                         <h4 className="footer__heading uppercase-text-2">
                             PRODUCT
                         </h4>
-                        <a href="" className="text-lg">
-                            Living Room
-                        </a>
-                        <a href="" className="text-lg">
-                            Bed Room
-                        </a>
-                        <a href="" className="text-lg">
-                            Office Room
-                        </a>
+                        {productLinks.map((link, idx) => {
+                            return (
+                                <a
+                                    href={link.link}
+                                    className="text-lg"
+                                    key={idx}
+                                >
+                                    {link.text}
+                                </a>
+                            );
+                        })}
                     </div>
 
                     <div className="footer__about-us">
                         <h4 className="footer__heading uppercase-text-2">
                             OUR COMPANY
                         </h4>
-                        <a href="" className="text-lg">
-                            About us
-                        </a>
-                        <a href="" className="text-lg">
-                            Services
-                        </a>
-                        <a href="" className="text-lg">
-                            Products
-                        </a>
+                        {aboutUsLinks.map((link, idx) => {
+                            return (
+                                <a
+                                    href={link.link}
+                                    className="text-lg"
+                                    key={idx}
+                                >
+                                    {link.text}
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
