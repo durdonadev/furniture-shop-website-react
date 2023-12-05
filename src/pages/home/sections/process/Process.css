@@ -1,0 +1,48 @@
+/* Process Section*/
+
+.process-section {
+    padding: 4rem 15.2rem 14rem;
+}
+
+.process-section .uppercase-text-1 {
+    opacity: 0.69;
+    margin-bottom: 11rem;
+}
+
+.process-row:not(:last-child) {
+    margin-bottom: 14rem;
+}
+
+.number,
+.process-heading,
+.process-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.process-link {
+    display: inline-block;
+    vertical-align: bottom;
+    width: calc((100% - 26rem) * 0.2);
+}
+
+.number {
+    width: calc((100% - 26rem) * 0.1);
+    margin-right: 6rem;
+    color: var(--green-color-100);
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 4rem;
+}
+
+.process-heading {
+    width: calc((100% - 26rem) * 0.3);
+    margin-right: 10rem;
+}
+
+.process-text {
+    padding-left: 0;
+    padding-top: 0;
+    width: calc((100% - 26rem) * 0.4);
+    margin-right: 10rem;
+}
