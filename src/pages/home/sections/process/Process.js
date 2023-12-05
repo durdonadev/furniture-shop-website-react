@@ -1,5 +1,6 @@
 import "./Process.css";
 import { processes } from "./data";
+import { Line } from "../../../../design-system/Line/Line";
 
 const ProcessRow = (props) => {
     return (
@@ -9,7 +10,7 @@ const ProcessRow = (props) => {
 
             <p className="process-text text-lg">{props.description}</p>
             <div className="process-link">
-                <div className="orange-line"></div>
+                <Line color="orange"></Line>
                 <a className="uppercase-text-2" href={props.link}>
                     {" "}
                     LEARN MORE
