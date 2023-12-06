@@ -1,0 +1,16 @@
+.line {
+    display: inline-block;
+    vertical-align: super;
+    width: 4rem;
+    height: 0.4rem;
+    border-radius: 0.8rem;
+    margin-right: 2.5rem;
+}
+
+.orange-line-color {
+    background-color: var(--orange-color);
+}
+
+.white-line-color {
+    background-color: var(--white-color);
+}

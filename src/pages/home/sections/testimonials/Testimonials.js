@@ -1,6 +1,7 @@
 import "./Testimonials.css";
 import testimonial from "../../../../assets/lady-drinking-coffee.jpeg";
 import playIcon from "../../../../assets/play.svg";
+import { Line } from "../../../../design-system/Line/Line";
 
 export const Testimonials = () => {
     return (
@@ -11,7 +12,7 @@ export const Testimonials = () => {
                         “It was super easy to share my unique concept. I got
                         exactly what I ordered. Great service!”
                     </h3>
-                    <div className="white-line"></div>
+                    <Line color="white"></Line>
                     <span className="testimonials-name">Jenny Wilson</span>
                     <p className="text-md">St. Celina, Delaware</p>
                 </div>

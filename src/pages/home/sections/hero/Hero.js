@@ -1,6 +1,7 @@
 import "./Hero.css";
 import cicle from "../../../../assets/shape-1.png";
 import hero from "../../../../assets/hero.png";
+import { Line } from "../../../../design-system/Line/Line";
 
 export const Hero = () => {
     return (
@@ -30,7 +31,7 @@ export const Hero = () => {
                             Rediscover the timeless allure of the past as Whiter
                             effortlessly revives the beloved vintage aesthetic.
                         </p>
-                        <div className="orange-line"></div>
+                        <Line color="orange"></Line>
                         <a className="uppercase-text-2" href="">
                             EXPLORE OUR PRODUCTS
                         </a>

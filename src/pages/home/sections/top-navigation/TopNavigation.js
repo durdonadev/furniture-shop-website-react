@@ -1,5 +1,4 @@
 import "./TopNavigation.css";
-
 import logo from "../../../../assets/logo.svg";
 
 const links = [
