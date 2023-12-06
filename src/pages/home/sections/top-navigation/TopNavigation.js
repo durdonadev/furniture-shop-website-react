@@ -8,6 +8,14 @@ const links = [
     { text: "Support", link: "" }
 ];
 
+const Link = (props) => {
+    return (
+        <li>
+            <a href={props.link}>{props.text}</a>
+        </li>
+    );
+};
+
 export const TopNavigation = () => {
     return (
         <header id="header">
@@ -18,9 +26,11 @@ export const TopNavigation = () => {
                     <ul className="navigation__links">
                         {links.map((link, idx) => {
                             return (
-                                <li key={idx}>
-                                    <a href={link.link}>{link.text}</a>
-                                </li>
+                                <Link
+                                    key={idx}
+                                    link={link.link}
+                                    text={link.text}
+                                />
                             );
                         })}
                     </ul>
