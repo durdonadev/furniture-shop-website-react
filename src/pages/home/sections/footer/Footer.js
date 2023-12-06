@@ -2,6 +2,14 @@ import "./Footer.css";
 import logo from "../../../../assets/logo.svg";
 import { contactLinks, productLinks, aboutUsLinks } from "./data.js";
 
+const Link = (props) => {
+    return (
+        <a href={props.link} className="text-lg">
+            {props.text}
+        </a>
+    );
+};
+
 export const Footer = () => {
     return (
         <footer id="footer">
@@ -23,13 +31,11 @@ export const Footer = () => {
                         <p className="text-lg">62 Orp St, Seattle, USA</p>
                         {contactLinks.map((link, idx) => {
                             return (
-                                <a
-                                    href={link.link}
-                                    className="text-lg"
+                                <Link
                                     key={idx}
-                                >
-                                    {link.text}
-                                </a>
+                                    link={link.link}
+                                    text={link.text}
+                                />
                             );
                         })}
                     </div>
@@ -40,13 +46,11 @@ export const Footer = () => {
                         </h4>
                         {productLinks.map((link, idx) => {
                             return (
-                                <a
-                                    href={link.link}
-                                    className="text-lg"
+                                <Link
                                     key={idx}
-                                >
-                                    {link.text}
-                                </a>
+                                    link={link.link}
+                                    text={link.text}
+                                />
                             );
                         })}
                     </div>
@@ -57,13 +61,11 @@ export const Footer = () => {
                         </h4>
                         {aboutUsLinks.map((link, idx) => {
                             return (
-                                <a
-                                    href={link.link}
-                                    className="text-lg"
+                                <Link
                                     key={idx}
-                                >
-                                    {link.text}
-                                </a>
+                                    link={link.link}
+                                    text={link.text}
+                                />
                             );
                         })}
                     </div>
