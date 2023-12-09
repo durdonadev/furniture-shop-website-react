@@ -79,3 +79,52 @@
     vertical-align: top;
     margin-left: 2.4rem;
 }
+
+/* Media-query */
+/* Tablet */
+@media (max-width: 1000px) {
+    .subscribe-section {
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+
+    .subscribe-wrapper {
+        width: 60%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .subscribe-section {
+        padding-right: 2.8rem;
+        padding-left: 2.8rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .subscribe-wrapper {
+        width: 100%;
+    }
+
+    .subscribe-section .heading-3 {
+        margin-bottom: 1.6rem;
+    }
+
+    .subscribe-section .text-lg {
+        margin-bottom: 3.5rem;
+    }
+
+    #emailInput {
+        display: block;
+        width: 100%;
+        border-radius: 1rem;
+        margin-bottom: 1.3rem;
+    }
+
+    #subscribeInput {
+        display: block;
+        width: 100%;
+        border-radius: 1rem;
+        margin-bottom: 2.3rem;
+    }
+}

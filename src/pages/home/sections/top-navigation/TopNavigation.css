@@ -75,3 +75,30 @@
 .show-menu {
     display: inline-block;
 }
+
+/* Media-query */
+/* Tablet*/
+@media (max-width: 1000px) {
+    .navigation {
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navigation__actions {
+        display: none;
+    }
+
+    #mobile-nav-icon {
+        display: inline-block;
+        position: absolute;
+        right: 2.8rem;
+    }
+
+    .navigation {
+        padding-right: 2.8rem;
+        padding-left: 2.8rem;
+    }
+}
