@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./base.css";
-import "./media-query.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

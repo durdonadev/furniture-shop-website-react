@@ -14,3 +14,11 @@
 .white-line-color {
     background-color: var(--white-color);
 }
+
+/* Media-query */
+@media (max-width: 1000px) {
+    .line {
+        width: 3rem;
+        margin-right: 1.5rem;
+    }
+}
