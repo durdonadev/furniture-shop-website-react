@@ -1,63 +1,80 @@
+import React from "react";
 import "./TopNavigation.css";
+import { links } from "./data";
 import logo from "../../../../assets/logo.svg";
+import burgerIcon from "../../../../assets/menu.svg";
 
-const links = [
-    { text: "Products", link: "https://google.com" },
-    { text: "Rooms", link: "https://facebook.com" },
-    { text: "Inspiration", link: "" },
-    { text: "Support", link: "" }
-];
-
-const Link = (props) => {
+const NavigationLinks = (props) => {
     return (
-        <li>
-            <a href={props.link}>{props.text}</a>
-        </li>
+        <ul className="navigation__links">
+            {props.links.map((link, idx) => {
+                return (
+                    <li key={idx}>
+                        <a href={link.link}>{link.text}</a>
+                    </li>
+                );
+            })}
+        </ul>
     );
 };
 
-export const TopNavigation = () => {
-    return (
-        <header id="header">
-            <div className="navigation container">
-                <img className="logo" src={logo} alt="Whiter logo" />
+export class TopNavigation extends React.Component {
+    state = {
+        showMenu: false
+    };
 
-                <nav className="navigation__actions">
-                    <ul className="navigation__links">
-                        {links.map((link, idx) => {
-                            return (
-                                <Link
-                                    key={idx}
-                                    link={link.link}
-                                    text={link.text}
-                                />
-                            );
-                        })}
-                    </ul>
-                    <div className="sign-in__wrapper">
-                        <a href="">Sign in</a>
-                    </div>
-                </nav>
-                <img src="./images/menu.svg" alt="" id="mobile-nav-icon" />
+    openMenu = () => {
+        this.setState({
+            showMenu: true
+        });
+    };
 
-                <nav className="mobile-nav">
+    closeMenu = () => {
+        this.setState({
+            showMenu: false
+        });
+    };
+
+    render() {
+        const menuClass = this.state.showMenu ? "show-menu" : "";
+
+        return (
+            <header id="header">
+                <div className="navigation container">
+                    <img className="logo" src={logo} alt="Whiter logo" />
+
+                    <nav className="navigation__actions">
+                        <NavigationLinks links={links} />
+                        <div className="sign-in__wrapper">
+                            <a href="">Sign in</a>
+                        </div>
+                    </nav>
+
                     <img
-                        className="mobile-nav_logo"
-                        src="./images/logo.svg"
-                        alt="Whiter logo"
+                        onClick={this.openMenu}
+                        src={burgerIcon}
+                        alt=""
+                        id="mobile-nav-icon"
                     />
-                    <span className="close-icon">&times;</span>
-                    <ul className="mobile-navigation__links">
-                        {links.map((link, idx) => {
-                            return (
-                                <li key={idx}>
-                                    <a href={link.link}>{link.text}</a>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    );
-};
+
+                    {this.state.showMenu ? (
+                        <nav className={`mobile-nav ${menuClass}`}>
+                            <img
+                                className="mobile-nav_logo"
+                                src={logo}
+                                alt="Whiter logo"
+                            />
+                            <span
+                                className="close-icon"
+                                onClick={this.closeMenu}
+                            >
+                                &times;
+                            </span>
+                            <NavigationLinks links={links} />
+                        </nav>
+                    ) : null}
+                </div>
+            </header>
+        );
+    }
+}
