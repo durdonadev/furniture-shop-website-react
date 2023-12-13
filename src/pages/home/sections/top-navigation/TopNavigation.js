@@ -36,7 +36,7 @@ export class TopNavigation extends React.Component {
     };
 
     render() {
-        const menuClass = this.state.showMenu ? "show-menu" : "";
+        // const menuClass = this.state.showMenu ? "show-menu" : "";
 
         return (
             <header id="header">
@@ -57,8 +57,8 @@ export class TopNavigation extends React.Component {
                         id="mobile-nav-icon"
                     />
 
-                    {this.state.showMenu ? (
-                        <nav className={`mobile-nav ${menuClass}`}>
+                    {this.state.showMenu && (
+                        <nav className={`mobile-nav`}>
                             <img
                                 className="mobile-nav_logo"
                                 src={logo}
@@ -72,7 +72,7 @@ export class TopNavigation extends React.Component {
                             </span>
                             <NavigationLinks links={links} />
                         </nav>
-                    ) : null}
+                    )}
                 </div>
             </header>
         );
