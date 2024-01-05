@@ -70,12 +70,12 @@
     right: 0rem;
     z-index: 10;
 
-    display: none;
+    /* display: none; */
 }
-
+/* 
 .show-menu {
     display: inline-block;
-}
+} */
 
 /* Media-query */
 /* Tablet*/
