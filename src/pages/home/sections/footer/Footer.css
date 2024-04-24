@@ -1,17 +1,20 @@
 /* Footer Section */
+#footer {
+    margin-bottom: 6rem;
+}
 
 .footer {
-    padding: 0 6rem 6rem;
+    padding: 0 6rem;
 }
 
 .footer__content {
     background-color: var(--beige-color);
     border-radius: 3rem;
-    padding: 14rem 9.2rem;
+    padding: 13.2rem 9.2rem;
 }
 
 .footer__content > *:not(:last-child) {
-    margin-right: 8rem;
+    margin-right: 8%;
 }
 
 .footer__content > * {
@@ -20,11 +23,11 @@
 }
 
 .footer__content > *:not(:first-child) {
-    width: calc((100% - 24rem) * 0.7 / 3);
+    width: calc((100% - 24%) * 0.7 / 3);
 }
 
 .footer__brand {
-    width: calc((100% - 24rem) * 0.3);
+    width: calc((100% - 24%) * 0.3);
 }
 
 .footer__brand img {
@@ -52,15 +55,14 @@ a:not(:last-child) {
 
 /* Media-query */
 /* Tablet */
-@media (max-width: 1000px) {
+@media (max-width: 70em) {
     .footer {
-        padding-right: 4rem;
-        padding-left: 4rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
 
     .footer__content {
-        padding-right: 6rem;
-        padding-left: 6rem;
+        padding: 10rem 5rem;
     }
 
     .footer__content .text-lg {
@@ -73,19 +75,53 @@ a:not(:last-child) {
     }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 60em) {
     .footer {
-        padding-right: 1.4rem;
-        padding-left: 1.4rem;
-        padding-bottom: 2.8rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 
     .footer__content {
-        padding-right: 2.8rem;
-        padding-left: 2.8rem;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding: 8rem 4.4rem;
+    }
+}
+
+@media (max-width: 50em) {
+    .footer {
+        padding-right: 1.6rem;
+        padding-left: 1.6rem;
+    }
+
+    .footer__content {
+        padding: 8rem 3.2rem;
+    }
+
+    .footer__content > *:not(:first-child) {
+        width: calc((100% - 24%) * 0.7 / 2);
+    }
+
+    .footer__brand {
+        display: block;
+
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .footer__brand img,
+    .footer__heading {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 40em) {
+    .footer {
+        padding-right: 1.4rem;
+        padding-left: 1.4rem;
+    }
+
+    .footer__content {
+        padding: 6rem 2.8rem;
     }
 
     .footer__content > *:not(:last-child) {
