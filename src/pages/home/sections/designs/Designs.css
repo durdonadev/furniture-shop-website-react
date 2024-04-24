@@ -119,7 +119,7 @@
 
 @media (max-width: 60em) {
     .designs-section {
-        padding: 6.4rem;
+        padding: 8rem 6.4rem;
     }
 }
 
@@ -137,10 +137,6 @@
 
 /* Mobile */
 @media (max-width: 35em) {
-    /* .designs-section {
-        padding: 6rem 2.8rem;
-    } */
-
     .designs-section .heading-3 {
         text-align: center;
     }
