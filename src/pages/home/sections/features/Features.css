@@ -118,3 +118,9 @@
         margin-bottom: 3rem;
     }
 }
+
+@media (max-width: 40em) {
+    .features-section {
+        padding: 6rem 2.8rem;
+    }
+}

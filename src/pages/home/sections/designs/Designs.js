@@ -10,18 +10,20 @@ export const Designs = () => {
     return (
         <section id="designs-section">
             <div className="designs-section container">
-                <h3 className="heading-3">Explore our exclusive design.</h3>
-                <div className="arrows">
-                    <img
-                        className="arrow-right"
-                        src={arrowRight}
-                        alt="arrow right"
-                    />
-                    <img
-                        className="arrow-left"
-                        src={arrowLeft}
-                        alt="arrow left"
-                    />
+                <div className="designs-section__heading">
+                    <h3 className="heading-3">Explore our exclusive design.</h3>
+                    <div className="arrows">
+                        <img
+                            className="arrow-right"
+                            src={arrowRight}
+                            alt="arrow right"
+                        />
+                        <img
+                            className="arrow-left"
+                            src={arrowLeft}
+                            alt="arrow left"
+                        />
+                    </div>
                 </div>
 
                 <div className="left design-img-box">
