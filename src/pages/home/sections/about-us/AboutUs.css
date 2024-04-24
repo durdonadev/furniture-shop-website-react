@@ -1,15 +1,18 @@
 /* About Section */
 
+#about-section {
+    background-color: var(--grey-color-25);
+}
+
 .about-section {
     padding: 18rem 15.2rem;
-    background-color: var(--grey-color-25);
 }
 
 .about-section__left {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 18rem;
-    width: calc((100% - 18rem) * 0.5);
+    margin-right: 10%;
+    width: 45%;
 }
 
 .about-section__left .img-box {
@@ -29,13 +32,14 @@
 
 .about-section__shape {
     position: absolute;
+    height: 18rem;
     top: 50%;
     left: 50%;
-    transform: translate(-10%, 100%);
+    transform: translate(-10%, 90%);
 }
 
 .about-section__right {
-    width: calc((100% - 18rem) * 0.5);
+    width: 45%;
     display: inline-block;
     vertical-align: middle;
 }
@@ -50,19 +54,9 @@
 
 /* Media-query */
 /* Tablet */
-@media (max-width: 1000px) {
+@media (max-width: 70em) {
     .about-section {
-        padding-right: 10rem;
-        padding-left: 10rem;
-    }
-
-    .about-section__left {
-        width: 50%;
-        margin-right: 12rem;
-    }
-
-    .about-section__right {
-        width: calc(50% - 12rem);
+        padding: 14rem 8rem;
     }
 
     .about-section__shape {
@@ -73,13 +67,23 @@
     }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 60em) {
     .about-section {
-        padding-right: 2.8rem;
-        padding-left: 2.8rem;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding: 10rem 6.4rem;
+    }
+
+    .about-section__shape {
+        height: 14rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-15%, 140%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 50em) {
+    .about-section {
+        padding: 8rem 4.8rem;
     }
 
     .about-section__left {
@@ -94,12 +98,24 @@
     }
 
     .about-section__shape {
-        width: 13rem;
-        transform: translate(-10%, 80%);
+        height: 14rem;
+        transform: translate(-10%, 90%);
     }
 
     .about-section__right {
         width: 100%;
         display: block;
+    }
+}
+
+@media (max-width: 40em) {
+    .about-section {
+        padding: 6rem 2.8rem;
+    }
+
+    .about-section__shape {
+        height: 12rem;
+
+        transform: translate(-15%, 120%);
     }
 }
